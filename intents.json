@@ -1,0 +1,105 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Greetings","How are you","Is anyone there?","Hello","Good day"],
+      "responses": ["Hello! Welcome to our website. How can I help you today?", "Hi there! How can I assist you?", "Hey! What can I do for you today?"]
+    },
+    {
+      "tag": "website_details",
+      "patterns": ["Tell me about your website", "What services do you provide?", "About your website"],
+      "responses": ["Our website is a platform that offers AI-powered chatbots for websites. We provide automated solutions to enhance user engagement and support.", "Welcome to our website! We specialize in providing chatbot solutions to enhance user experience and support on your website."]
+    },
+    {
+      "tag": "pricing",
+      "patterns": ["What are your pricing plans?", "Tell me about pricing", "How much does it cost?"],
+      "responses": ["We offer three plans: weekly for $5, monthly for $20, and yearly for $200."]
+    },
+    {
+      "tag": "weekly_plan",
+      "patterns": ["Tell me about the weekly plan", "What is included in the weekly plan?", "Weekly plan details"],
+      "responses": ["The weekly plan costs $5 and includes XYZ features."]
+    },
+    {
+      "tag": "monthly_plan",
+      "patterns": ["Tell me about the monthly plan", "What is included in the monthly plan?", "Monthly plan details"],
+      "responses": ["The monthly plan costs $20 and includes XYZ features."]
+    },
+    {
+      "tag": "yearly_plan",
+      "patterns": ["Tell me about the yearly plan", "What is included in the yearly plan?", "Yearly plan details"],
+      "responses": ["The yearly plan costs $200 and includes XYZ features."]
+    },
+    {
+      "tag": "features",
+      "patterns": ["What features do your chatbots have?", "Tell me about chatbot features", "Features of your chatbots"],
+      "responses": ["Our chatbots offer features such as natural language processing, multi-language support, and customizable conversation flows."]
+    },
+    {
+      "tag": "customization",
+      "patterns": ["Can I customize the chatbot?", "How flexible is customization?", "Customize chatbot"],
+      "responses": ["Yes, you can customize the chatbot to suit your specific needs. We provide tools and interfaces for easy customization."]
+    },
+    {
+      "tag": "support",
+      "patterns": ["How can I get support?", "Support options", "Help with chatbot"],
+      "responses": ["Our support team is available 24/7 to assist you. You can reach us through the support portal on our website."]
+    },
+    {
+      "tag": "installation",
+      "patterns": ["How do I install the chatbot on my website?", "Installation guide", "Install chatbot"],
+      "responses": ["Installing our chatbot is simple! Follow the step-by-step installation guide available in your account dashboard."]
+    },
+    {
+      "tag": "integration",
+      "patterns": ["Can I integrate the chatbot with other tools?", "Integration options", "Integrate chatbot"],
+      "responses": ["Yes, our chatbot can be easily integrated with popular tools such as CRM systems and messaging platforms. Check our documentation for detailed integration instructions."]
+    },
+    {
+      "tag": "demo",
+      "patterns": ["Can I see a demo of the chatbot?", "Show me a demo", "Chatbot in action"],
+      "responses": ["Certainly! Visit our demo page on the website to experience our chatbot in action."]
+    },
+    {
+      "tag": "upgrades",
+      "patterns": ["How do I upgrade my plan?", "Upgrade options", "Change subscription"],
+      "responses": ["You can upgrade your plan at any time from your account settings. Choose a plan that best fits your evolving needs."]
+    },
+    {
+      "tag": "cancel",
+      "patterns": ["How can I cancel my subscription?", "Cancel plan", "Unsubscribe"],
+      "responses": ["You can cancel your subscription through your account settings. If you need assistance, our support team is here to help."]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["Can I provide feedback?", "Give feedback", "Share my thoughts"],
+      "responses": ["Absolutely! We value your feedback. You can share your thoughts through our feedback form on the website."]
+    },
+    {
+      "tag": "privacy",
+      "patterns": ["How is my data handled?", "Privacy policy", "Data protection"],
+      "responses": ["We prioritize the privacy and security of your data. You can review our detailed privacy policy on our website."]
+    },
+    {
+      "tag": "partnership",
+      "patterns": ["Do you offer partnership opportunities?", "Partnership details", "Collaboration"],
+      "responses": ["Yes, we are open to partnership opportunities. Contact our partnership team through the partnership section on our website."]
+    },
+    {
+      "tag": "events",
+      "patterns": ["Are there upcoming events?", "Events schedule", "Participate in events"],
+      "responses": ["Stay tuned for upcoming events! You can find our events schedule on the events page of our website."]
+    },
+    {
+      "tag": "blog",
+      "patterns": ["Tell me about your blog", "Read your blog", "Blog articles"],
+      "responses": ["Explore our blog for insightful articles on AI, chatbots, and website optimization. Visit the blog section on our website."]
+    },
+    {
+      "tag": "contacts",
+      "patterns": ["i want to buy chatbot", "contact admin", "i need more details about chatbot"],
+      "responses": ["pleace wait i'll connect to admin"]
+    }
+  
+  ]
+}

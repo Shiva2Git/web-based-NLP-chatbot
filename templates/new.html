@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        <label for="searchInput">Search Subscriber:</label>
+        <input type="text" id="searchInput" oninput="getAutocompleteSuggestions(this.value)">
+        <ul id="autocompleteList" class="autocom-box"></ul>
+    
+        <script>
+            function getAutocompleteSuggestions(prefix) {
+                if(prefix ===""){
+                    return
+                }
+                fetch(`http://192.168.1.8:5000/autocomplete/${prefix}`)
+                    .then(response => response.json())
+                    .then(suggestions => {
+                        const autocompleteList = document.querySelector('.search');
+                        // autocompleteList.innerHTML = '';
+    
+                        suggestions.forEach(suggestion => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = suggestion;
+                            autocompleteList.appendChild(listItem);
+                        });
+                    });
+                   
+            }
+        </script>
+    
+</body>
+</html>

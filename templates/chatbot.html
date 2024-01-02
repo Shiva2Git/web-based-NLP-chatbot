@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- <div id="chatboxid" class="chatbox" style="display: none;">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h3 class="chatbox__heading--header"><i>chatbot</i></h3>
+                </div>
+                <button class="chatbox_close-btn"><img id="close-btn" src="../static/img/close-line-icon.svg" /></button>
+            </div>
+            <div class="chatbox__messages" >
+                <div id="chatbox__messages"></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" id="chat" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button" id="sendbtn">Send</button>
+            </div>
+        </div>
+        </div>
+       
+        </div>
+        <div class="chatbox__button"  id="showChatbot">
+            <button id="showbtn"><img src="/static/img/chatbox-icon.svg" /></button>
+        </div>
+        -->
+<script>
+    // Create chatbox container
+const chatboxContainer = document.createElement('div');
+chatboxContainer.id = 'chatboxid';
+chatboxContainer.className = 'chatbox';
+chatboxContainer.style.display = 'none';
+
+// Create chatbox support section
+const chatboxSupport = document.createElement('div');
+chatboxSupport.className = 'chatbox__support';
+
+// Create chatbox header
+const chatboxHeader = document.createElement('div');
+chatboxHeader.className = 'chatbox__header';
+
+// Create chatbox image in the header
+const chatboxImageHeader = document.createElement('div');
+chatboxImageHeader.className = 'chatbox__image--header';
+const img = document.createElement('img');
+img.src = 'https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png';
+img.alt = 'image';
+chatboxImageHeader.appendChild(img);
+
+// Create chatbox content in the header
+const chatboxContentHeader = document.createElement('div');
+chatboxContentHeader.className = 'chatbox__content--header';
+const heading = document.createElement('h3');
+heading.className = 'chatbox__heading--header';
+heading.textContent = 'Chatbot';
+chatboxContentHeader.appendChild(heading);
+
+// Create close button in the header
+const closeButton = document.createElement('button');
+closeButton.className = 'chatbox_close-btn';
+const closeImg = document.createElement('img');
+closeImg.id = 'close-btn';
+closeImg.src = '../static/img/close-line-icon.svg';
+closeButton.appendChild(closeImg);
+
+// Append header components
+chatboxHeader.appendChild(chatboxImageHeader);
+chatboxHeader.appendChild(chatboxContentHeader);
+chatboxHeader.appendChild(closeButton);
+
+// Create chatbox messages section
+const chatboxMessages = document.createElement('div');
+chatboxMessages.className = 'chatbox__messages';
+const messagesContainer = document.createElement('div');
+messagesContainer.id = 'chatbox__messages';
+chatboxMessages.appendChild(messagesContainer);
+
+// Create chatbox footer
+const chatboxFooter = document.createElement('div');
+chatboxFooter.className = 'chatbox__footer';
+
+// Create input field in the footer
+const inputField = document.createElement('input');
+inputField.type = 'text';
+inputField.id = 'chat';
+inputField.placeholder = 'Write a message...';
+
+// Create send button in the footer
+const sendButton = document.createElement('button');
+sendButton.className = 'chatbox_send--footer send_button';
+sendButton.id = 'sendbtn';
+sendButton.textContent = 'Send';
+
+// Append footer components
+chatboxFooter.appendChild(inputField);
+chatboxFooter.appendChild(sendButton);
+
+// Append support components
+chatboxSupport.appendChild(chatboxHeader);
+chatboxSupport.appendChild(chatboxMessages);
+chatboxSupport.appendChild(chatboxFooter);
+
+// Append chatbox support to container
+chatboxContainer.appendChild(chatboxSupport);
+
+// Create chatbox button
+const chatboxButton = document.createElement('div');
+chatboxButton.className = 'chatbox__button';
+chatboxButton.id = 'showChatbot';
+const button = document.createElement('button');
+button.id = 'showbtn';
+const buttonImg = document.createElement('img');
+buttonImg.src = '/static/img/chatbox-icon.svg';
+button.appendChild(buttonImg);
+chatboxButton.appendChild(button);
+
+// Append everything to the body
+document.body.appendChild(chatboxContainer);
+document.body.appendChild(chatboxButton);
+</script>
+  
+</body>
+</html>

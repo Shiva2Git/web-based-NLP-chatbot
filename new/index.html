@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        while(1){
+        var name=prompt("name")
+        if(name===""){
+            var name=prompt("name")
+            
+        }
+        else{
+            document.querySelector("body").appendChild(document.createElement("h1"))
+            document.querySelector("h1").innerHTML=name
+            break
+        }
+    }
+       
+
+
+    </script>
+</body>
+</html>
